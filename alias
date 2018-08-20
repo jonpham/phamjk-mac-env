@@ -1,0 +1,12 @@
+alias gogit='cd ~/code
+alias g='git'
+alias del_orig='find . -type f -name '*.orig' -delete'
+alias cleanupDS='find . -type f -name '\''*.orig'\'' -ls -delete'
+
+# Rails Aliases
+alias killRails="ps x | grep 'bin/rails s' | grep -v grep"
+
+# GIT ALIASES
+alias git-root='cd `git rev-parse --show-toplevel`'
+
+# Also See bash_profile for other default aliases

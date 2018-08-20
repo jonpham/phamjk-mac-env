@@ -1,0 +1,29 @@
+[user]
+	name = Jonathan Pham
+	email = jonathan@paysa.com
+[push]
+	default = upstream
+[core]
+	editor = vim
+	excludesfile = /Users/jonathan/.gitignore_global
+[color]
+	ui = auto
+
+[alias]
+        ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+        ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+        lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' 
+        lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' 
+        lg = !"git lg1"
+        dl = "!git ll -1"
+        f = "!git ls-files | grep -i"
+        co = checkout
+        ci = commit -m
+        stat = status
+        cleandir1 = clean -ndX
+        cleandir2 = clean -fdX
+        cleandir = !"git cleandir1"
+        upd = remote -v update
+        dlc = diff --cached HEAD^
+        filelog = log -u
+        fl = !"git filelog"
